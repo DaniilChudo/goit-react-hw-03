@@ -1,20 +1,13 @@
-/*.item {
-  text-align: left;
-  color: red;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}*/
-
-/* styles.module.css або styles.css */
 .item {
+  font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 10px; /* або будь-який інший відступ, щоб додати простору */
-  border: 1px solid #ccc; /* Оформлення для виділення елемента */
-  border-radius: 5px; /* Кутові округлення */
-  margin-bottom: 10px; /* Відступ між контактами */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px 10px rgb(155, 230, 167);
 }
 
 .item div {
@@ -24,7 +17,7 @@
 
 .item button {
   padding: 5px 10px;
-  background-color: #ff6b6b; /* Червоний фон для кнопки */
+  background-color: #ff6b6b;
   border: none;
   color: white;
   border-radius: 3px;
@@ -33,5 +26,12 @@
 }
 
 .item button:hover {
-  background-color: #ff4d4d; /* Темніший червоний при наведенні */
+  background-color: #ff4d4d;
+}
+
+.item p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
