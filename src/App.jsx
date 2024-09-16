@@ -5,19 +5,15 @@ import ContactList from "./components/ContacList/ContactList";
 import "./App.css";
 
 function App() {
-  const [contacts, setContacts] = useState([]);
-  const [filter, setFilter] = useState("");
+  const [contacts, setContacts] = useState(
+    () => JSON.parse(localStorage.getItem("contacts")) || []
+  );
 
   useEffect(() => {
-    const savedContacts = JSON.parse(localStorage.getItem("contacts")) || [];
-    setContacts(savedContacts);
-  }, []);
-
-  useEffect(() => {
-    if (contacts.length > 0) {
-      localStorage.setItem("contacts", JSON.stringify(contacts));
-    }
+    localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
+
+  const [filter, setFilter] = useState("");
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
