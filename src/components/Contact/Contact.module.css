@@ -1,0 +1,37 @@
+/*.item {
+  text-align: left;
+  color: red;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}*/
+
+/* styles.module.css або styles.css */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* або будь-який інший відступ, щоб додати простору */
+  border: 1px solid #ccc; /* Оформлення для виділення елемента */
+  border-radius: 5px; /* Кутові округлення */
+  margin-bottom: 10px; /* Відступ між контактами */
+}
+
+.item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.item button {
+  padding: 5px 10px;
+  background-color: #ff6b6b; /* Червоний фон для кнопки */
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item button:hover {
+  background-color: #ff4d4d; /* Темніший червоний при наведенні */
+}
